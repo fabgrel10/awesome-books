@@ -28,10 +28,14 @@ class Book {
     let html = '';
     Book.books.forEach((book, index) => {
       html += `<div class="book">
-                  <p>${book.title}</p>
-                  <p>${book.author}</p>
-                  <button type="button" class="removeBtn" id="${index}">Remove</button>
-                  <hr />
+                <div class="book-info">
+                  <label>${book.title}</label>
+                  <label>${book.author}</label>
+                </div>
+                <div>
+                   <button type="button" class="removeBtn" >Remove</button>
+                </div>
+                <hr />
                 </div>`;
     });
     document.querySelector('#book-storage').innerHTML = html;
