@@ -1,5 +1,3 @@
-/* eslint-disable max-classes-per-file */
-
 const bookTitle = document.getElementById('book-title');
 const bookAuthor = document.getElementById('book-author');
 const addBookButton = document.getElementById('add-book-button');
