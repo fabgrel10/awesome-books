@@ -4,48 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Awesome Books</title>
   </head>
   <body>
     <h2>Awesome books</h2>
-    <ul>
-      <li>
-        <div>
-          <label>Title 1</label>
-          <label>Author 1</label>
-          <button id="0" onclick="removeBook(e)" type="button">Remove</button>
-        </div>
-      </li>
-      <li>
-        <div>
-          <label>Title 2</label>
-          <label>Author 2</label>
-          <button id="1" onclick="removeBook(e)"type="button">Remove</button>
-        </div>
-      </li>
-    </ul>
+    <div id="book-storage"></div>
     <form>
-      <input type="text" id="enterTitle" placeholder="Title">
-      <input type="text" id="enterAuthor" placeholder="Author">
-      <button type="button" onclick="addBook()">Add</button>
+      <input type="text" id="book-title" placeholder="Title" />
+      <input type="text" id="book-author" placeholder="Author" />
+      <button id="add-book-button" type="button">Add Book</button>
     </form>
-    <script >
-
-let books = [{title: "book 1", author: "author 1"},{title: "book 2", author: "author 2"}]
-console.log(books);
-
-const addBook = () => {
-    let title = document.getElementById('enterTitle').value;
-    let author = document.getElementById('enterAuthor').value;
-    books.push({title, author});
-    console.log(books);
-}
-
-const removeBook = (e) => {
-    let event = e.target;
-    books.filter
-}
-
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
