@@ -1,59 +1,68 @@
 li {
-    text-decoration: none;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(224, 231, 231);
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    margin: 0 auto;
-  }
-  
-  #book-storage {
-    border: 1px solid black;
-    width: 200px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-
-  
-  .book {
-    display: flex;
-    height: 2.5rem;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .book:nth-child(odd){
-    background-color: rgba(233, 227, 217, 0.733);
+  text-decoration: none;
 }
 
-  .book-div {
-      display: flex;
-      flex-direction: column;
-  }
-  
-  .book-info {
-    padding: 0.25rem;
-    width: 83%;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(224, 231, 231);
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
 
-  form {
-    display: flex;
-    width: 40%;
-    flex-direction: column;
-    margin: 3rem auto;
-  }
-   
-  input {
-      margin: 0.25rem auto;
-  }
-  button {
-    background-color:rgba(233, 227, 217, 0.733);
-    box-shadow:  rgba(22, 22, 22, 0.815) 0.1rem 0.2rem;
-  }
+#book-storage {
+  border: 1px solid black;
+  width: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.book {
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book:nth-child(odd) {
+  background-color: #fff;
+}
+
+.book-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-info {
+  padding: 0.25rem;
+  width: 83%;
+}
+
+form {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  margin: 3rem auto;
+}
+
+input {
+  margin: 0.25rem auto;
+}
+
+button {
+  background-color: rgba(233, 227, 217, 0.733);
+  box-shadow: rgba(22, 22, 22, 0.815) 0.1rem 0.2rem;
+}
+
+.form-title {
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+#add-book-button {
+  margin: 0.5rem auto;
+  width: 30%;
+}
