@@ -1,26 +1,43 @@
-window.onload = () => {
-  let books = [];
-  const bookTitle = document.getElementById('book-title');
-  const bookAuthor = document.getElementById('book-author');
-  const addBookButton = document.getElementById('add-book-button');
-  if (localStorage.length === 0) {
+/* eslint-disable max-classes-per-file */
+
+const bookTitle = document.getElementById('book-title');
+const bookAuthor = document.getElementById('book-author');
+const addBookButton = document.getElementById('add-book-button');
+
+class Book {
+  static books = [];
+
+  static store(books) {
     localStorage.setItem('books', JSON.stringify(books));
   }
-  const bookStorage = (books) => {
-    localStorage.setItem('books', JSON.stringify(books));
-  };
 
-  const displayBooks = () => {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+
+  addBook() {
+    if (bookTitle.value === '' || bookAuthor.value === '') {
+      // eslint-disable-next-line no-alert
+      alert('Please enter a title and author');
+      return;
+    }
+    Book.books.push(this);
+    Book.store(Book.books);
+  }
+
+  displayBooks = () => {
     const booksLocalStorage = JSON.parse(localStorage.getItem('books'));
-    books = booksLocalStorage;
+    console.log(booksLocalStorage);
+    Book.books = booksLocalStorage;
     let html = '';
     booksLocalStorage.forEach((book, index) => {
       html += `<div class="book">
-                <p>${book.title}</p>
-                <p>${book.author}</p>
-                <button type="button" class="removeBtn" id="${index}">Remove</button>
-                <hr />
-              </div>`;
+                  <p>${book.title}</p>
+                  <p>${book.author}</p>
+                  <button type="button" class="removeBtn" id="${index}">Remove</button>
+                  <hr />
+                </div>`;
     });
     document.querySelector('#book-storage').innerHTML = html;
 
@@ -28,37 +45,20 @@ window.onload = () => {
 
     removeBook.forEach((button) => {
       button.addEventListener('click', (e) => {
-        const bookIndex = e.target.id;
-        books.splice(bookIndex, 1);
-        bookStorage(books);
-        displayBooks();
+        Book.books.splice(e.target.id, 1);
+        Book.store(Book.books);
+        Book.displayBooks();
       });
     });
   };
+}
 
-  const addBook = (title, author) => {
-    const newBook = {
-      title,
-      author,
-    };
+addBookButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  Book.displayBooks();
+});
 
-    if (bookTitle.value === '' || bookAuthor.value === '') {
-      // eslint-disable-next-line no-alert
-      alert('Please enter a title and author');
-      return;
-    }
-    books.push(newBook);
-    bookStorage(books);
-    bookTitle.value = '';
-    bookAuthor.value = '';
-    displayBooks();
-  };
-
-  addBookButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    addBook(bookTitle.value, bookAuthor.value);
-    displayBooks();
-  });
-
-  displayBooks();
+window.onload = () => {
+  const book = new Book(bookTitle.value, bookAuthor.value);
+  book.displayBooks();
 };
