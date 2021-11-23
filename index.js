@@ -3,7 +3,9 @@ window.onload = () => {
   const bookTitle = document.getElementById('book-title');
   const bookAuthor = document.getElementById('book-author');
   const addBookButton = document.getElementById('add-book-button');
-
+  if (localStorage.length === 0) {
+    localStorage.setItem('books', JSON.stringify(books));
+  }
   const bookStorage = (books) => {
     localStorage.setItem('books', JSON.stringify(books));
   };
