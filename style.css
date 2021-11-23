@@ -11,10 +11,10 @@ body {
 }
 
 .book {
-    display: flex;
-    flex-direction: row!important;
-    height: 2.5rem;
-    align-items: center;
+  display: flex;
+  flex-direction: row !important;
+  height: 2.5rem;
+  align-items: center;
 }
 
 form {
