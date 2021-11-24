@@ -26,21 +26,20 @@ class Book {
 
   static displayBooks = () => {
     let html = '';
-    Book.books.forEach((book, index) => {
-      html += `<div class="book">
+    Book.books.forEach((book) => {
+      html += `<div class="book-div">
                 <div class="book-info">
-                  <label>${book.title}</label>
+                  <label>"${book.title}" by</label>
                   <label>${book.author}</label>
                 </div>
                 <div>
-                   <button type="button" class="removeBtn" >Remove</button>
+                   <button type="button" class="remove-btn" >Remove</button>
                 </div>
-                <hr />
                 </div>`;
     });
     document.querySelector('#book-storage').innerHTML = html;
 
-    const removeBook = document.querySelectorAll('.removeBtn');
+    const removeBook = document.querySelectorAll('.remove-btn');
 
     removeBook.forEach((button) => {
       button.addEventListener('click', (e) => {
