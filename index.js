@@ -25,6 +25,12 @@ class Book {
   }
 
   static displayBooks = () => {
+    if (!JSON.parse(localStorage.getItem('books'))) {
+      Book.books = [];
+    } else {
+      Book.books = JSON.parse(localStorage.getItem('books'));
+    }
+
     let html = '';
     Book.books.forEach((book) => {
       html += `<div class="book-div">
@@ -55,6 +61,8 @@ addBookButton.addEventListener('click', (e) => {
   e.preventDefault();
   Book.addBook();
   Book.displayBooks();
+  bookTitle.value = '';
+  bookAuthor.value = '';
 });
 
 window.onload = () => {
