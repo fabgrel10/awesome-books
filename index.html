@@ -9,16 +9,26 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <h2>All Awesome Books</h2>
-    <div id="book-storage"></div>
+    <div class="navbar">
+      <a class="active" href="#home">Awesome Books</a>
+      <div class="navbar-items">
+        <a class="navbar-item" href="#list">List</a>
+        <a class="navbar-item" href="#add-new">Add New</a>
+        <a class="navbar-item" href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container">
+      <h2>All Awesome Books</h2>
+      <div id="book-storage"></div>
 
-    <form>
-      <hr class="form-divider" />
-      <h2 class="form-title">Add a new book</h2>
-      <input type="text" id="book-title" placeholder="Title" />
-      <input type="text" id="book-author" placeholder="Author" />
-      <button id="add-book-button" type="button">Add Book</button>
-    </form>
+      <form>
+        <hr class="form-divider" />
+        <h2 class="form-title">Add a new book</h2>
+        <input type="text" id="book-title" placeholder="Title" />
+        <input type="text" id="book-author" placeholder="Author" />
+        <button id="add-book-button" type="button">Add Book</button>
+      </form>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
