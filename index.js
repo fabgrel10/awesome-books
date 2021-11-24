@@ -25,18 +25,27 @@ class Book {
   }
 
   static displayBooks = () => {
+    if (!JSON.parse(localStorage.getItem('books'))) {
+      Book.books = [];
+    } else {
+      Book.books = JSON.parse(localStorage.getItem('books'));
+    }
+
     let html = '';
-    Book.books.forEach((book, index) => {
-      html += `<div class="book">
-                  <p>${book.title}</p>
-                  <p>${book.author}</p>
-                  <button type="button" class="removeBtn" id="${index}">Remove</button>
-                  <hr />
+    Book.books.forEach((book) => {
+      html += `<div class="book-div">
+                <div class="book-info">
+                  <label>"${book.title}" by</label>
+                  <label>${book.author}</label>
+                </div>
+                <div>
+                   <button type="button" class="remove-btn" >Remove</button>
+                </div>
                 </div>`;
     });
     document.querySelector('#book-storage').innerHTML = html;
 
-    const removeBook = document.querySelectorAll('.removeBtn');
+    const removeBook = document.querySelectorAll('.remove-btn');
 
     removeBook.forEach((button) => {
       button.addEventListener('click', (e) => {
@@ -52,6 +61,8 @@ addBookButton.addEventListener('click', (e) => {
   e.preventDefault();
   Book.addBook();
   Book.displayBooks();
+  bookTitle.value = '';
+  bookAuthor.value = '';
 });
 
 window.onload = () => {
