@@ -57,6 +57,14 @@ class Book {
   };
 }
 
+function setDate() {
+  const date = document.getElementById('set-date');
+  // eslint-disable-next-line no-undef
+  const { DateTime } = luxon;
+
+  date.innerHTML = DateTime.now().toFormat('LLL dd yyyy, t');
+}
+
 addBookButton.addEventListener('click', (e) => {
   e.preventDefault();
   Book.addBook();
@@ -70,4 +78,5 @@ window.onload = () => {
     localStorage.setItem('books', JSON.stringify(Book.books));
   }
   Book.displayBooks();
+  setDate();
 };

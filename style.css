@@ -64,6 +64,10 @@ li {
 }
 
 /*** Date ***/
+#set-date {
+  text-align: right;
+  margin-right: 5px;
+}
 
 /*** Book Storage ***/
 #book-storage {
