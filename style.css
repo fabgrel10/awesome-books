@@ -67,6 +67,15 @@ li {
 #set-date {
   text-align: right;
   margin-right: 5px;
+  padding: 0.5rem;
+  width: 50%;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.75)
+}
+
+#set-date:hover {
+  color: black;
+  
 }
 
 /*** Book Storage ***/
@@ -134,3 +143,11 @@ button {
 }
 
 /*** Footer ***/
+footer {
+  border: 1px solid #333;
+  background-color: #fff;
+  padding: 0.5rem;
+  text-align: left;
+  width: 50%;
+  margin: 0 auto;
+}
