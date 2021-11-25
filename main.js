@@ -1,4 +1,4 @@
-import * as index from './index';
+import * as index from './index.js';
 
 const list = document.getElementById('list');
 const addNew = document.getElementById('add-new');
