@@ -1,3 +1,4 @@
+
 const bookTitle = document.getElementById('book-title');
 const bookAuthor = document.getElementById('book-author');
 const addBookButton = document.getElementById('add-book-button');
@@ -73,10 +74,5 @@ addBookButton.addEventListener('click', (e) => {
   bookAuthor.value = '';
 });
 
-window.onload = () => {
-  if (localStorage.length === 0) {
-    localStorage.setItem('books', JSON.stringify(Book.books));
-  }
-  Book.displayBooks();
-  setDate();
-};
+
+export {Book, setDate, addBookButton};

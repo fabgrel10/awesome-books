@@ -12,9 +12,9 @@
     <div class="navbar">
       <a class="active" href="#home">Awesome Books</a>
       <div class="navbar-items">
-        <a class="navbar-item" href="#list">List</a>
-        <a class="navbar-item" href="#add-new">Add New</a>
-        <a class="navbar-item" href="#contact">Contact</a>
+        <a class="navbar-item" id="list" href="#list" onclick="switchTabs()">List</a>
+        <a class="navbar-item" id="add-new" href="#add-new" onclick="switchTabs()">Add New</a>
+        <a class="navbar-item" id="contact" href="#contact" onclick="switchTabs()">Contact</a>
       </div>
     </div>
     <div id="set-date"></div>
@@ -33,7 +33,7 @@
     <footer>
       Copyright
     </footer>
-    <script src="index.js"></script>
+    <script src="main.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
   </body>
 </html>
