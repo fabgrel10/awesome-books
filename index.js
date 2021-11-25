@@ -1,4 +1,3 @@
-
 const bookTitle = document.getElementById('book-title');
 const bookAuthor = document.getElementById('book-author');
 const addBookButton = document.getElementById('add-book-button');
@@ -74,5 +73,4 @@ addBookButton.addEventListener('click', (e) => {
   bookAuthor.value = '';
 });
 
-
-export {Book, setDate, addBookButton};
+export { Book, setDate, addBookButton };

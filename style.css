@@ -75,7 +75,7 @@ li {
 
 #set-date:hover {
   color: black;
-  
+
 }
 
 /*** Book Storage ***/
@@ -140,6 +140,13 @@ button {
 #add-book-button {
   margin: 0.5rem auto;
   width: 15%;
+}
+
+/*** Contact info ***/
+#contact-info {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 50%;
 }
 
 /*** Footer ***/
