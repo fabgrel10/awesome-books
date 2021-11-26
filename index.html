@@ -4,9 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Awesome Books</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <script src="index.js"></script>
+    <header id="nav-wrapper">
+      <nav>
+        <a class="active" href="#home">Awesome Books</a>
+        <div id="nav-list">
+          <a class="nav-list-item" id="list" href="#list">List</a>
+          <a class="nav-list-item" id="add-new" href="#add-new">Add New</a>
+          <a class="nav-list-item" id="contact" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <section id="set-date"></section>
+    <section id="books">
+      <h2 id="awesome-books-title">All Awesome Books</h2>
+      <div id="book-storage"></div>
+      <form id="add-form">
+        <h2 class="form-title">Add a new book</h2>
+        <input type="text" id="book-title" placeholder="Title" />
+        <input type="text" id="book-author" placeholder="Author" />
+        <button id="add-book-button" type="button">
+          <span id="text-button">Add Book</span>
+          <span id="symbol-button">+</span>
+        </button>
+      </form>
+      <section id="contact-info">
+        <h2>Contact us</h2>
+        <p>Do you have any questions or you just want to say "Hello"?</p>
+        <p>You can reach out to us!</p>
+        <ul>
+          <li>
+            GitHub:
+            <a href="https://github.com/fabgrel10">@fabgrel10</a>
+          </li>
+          <li>
+            LinkedIn:
+            <a href="https://github.com/fabgrel10">@fabgrel10</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            GitHub:
+            <a href="https://github.com/alvarorf">@alvarorf</a>
+          </li>
+          <li>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/alvaro-andrés-ruiz-florez/"
+              >@alvaro-andrés-ruiz-florez/</a
+            >
+          </li>
+        </ul>
+      </section>
+    </section>
+    <footer>©2021 Awesome Developers, Inc. All rights reserved</footer>
+    <script src="main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js"></script>
   </body>
 </html>
