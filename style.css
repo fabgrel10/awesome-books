@@ -10,29 +10,29 @@ a {
 }
 
 li {
-  text-decoration: none;
+  list-style-type: none;
 }
 
 /*** Navbar ***/
-.navbar {
+nav {
   border: 1px solid #333;
   background-color: #fff;
   width: 50%;
   margin: 0 auto;
 }
 
-.navbar-items {
+#nav-list {
   display: flex;
   justify-content: flex-end;
 }
 
-.navbar-item {
+.nav-list-item {
   display: inherit;
   justify-content: center;
   width: 70px;
 }
 
-.navbar a.active {
+nav a.active {
   background-color: #eeede7;
   font-size: 20px;
   font-weight: bold;
@@ -40,12 +40,12 @@ li {
   border-right: #333 1px solid;
 }
 
-.navbar a.active:hover {
+nav a.active:hover {
   background-color: #fff;
   color: #333;
 }
 
-.navbar a {
+nav a {
   float: left;
   color: #333;
   text-align: right;
@@ -56,7 +56,7 @@ li {
   border-right: #333 1px solid;
 }
 
-.navbar a:hover {
+nav a:hover {
   background-color: #eeede7;
   color: black;
 }
@@ -64,7 +64,6 @@ li {
 /*** Date ***/
 #set-date {
   text-align: right;
-  margin-right: 5px;
   padding: 0.5rem;
   width: 50%;
   margin: 0 auto;
@@ -76,6 +75,12 @@ li {
 }
 
 /*** Book Storage ***/
+#books {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
 #book-storage {
   border: 1px solid #333;
   box-shadow: rgba(22, 22, 22, 0.815) 0.1rem 0.2rem;
@@ -106,7 +111,8 @@ form {
   display: flex;
   width: 40%;
   flex-direction: column;
-  margin: 3rem auto;
+  padding-top: 200px;
+  margin: 0 auto;
 }
 
 input {
@@ -141,9 +147,16 @@ button {
 
 /*** Contact info ***/
 #contact-info {
-  padding: 1rem;
+  display: flex;
+  padding-top: 100px;
   margin: 0 auto;
   width: 50%;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+#contact-info > h2 {
+  text-align: center;
 }
 
 /*** Footer ***/
