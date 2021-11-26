@@ -1,18 +1,88 @@
 body {
-  display: flex;
-  flex-direction: column;
   background-color: #eeede7;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
 }
 
-li {
+a {
   text-decoration: none;
 }
 
+li {
+  list-style-type: none;
+}
+
+/*** Navbar ***/
+nav {
+  border: 1px solid #333;
+  background-color: #fff;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list-item {
+  display: inherit;
+  justify-content: center;
+  width: 70px;
+}
+
+nav a.active {
+  background-color: #eeede7;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 7px 10px;
+  border-right: #333 1px solid;
+}
+
+nav a.active:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+nav a {
+  float: left;
+  color: #333;
+  text-align: right;
+  padding: 10px 14px;
+  margin-bottom: 0;
+  text-decoration: none;
+  font-size: 16px;
+  border-right: #333 1px solid;
+}
+
+nav a:hover {
+  background-color: #eeede7;
+  color: black;
+}
+
+/*** Date ***/
+#set-date {
+  text-align: right;
+  padding: 0.5rem;
+  width: 50%;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+#set-date:hover {
+  color: black;
+}
+
+/*** Book Storage ***/
+#books {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
 #book-storage {
-  border: 1px solid black;
+  border: 1px solid #333;
   box-shadow: rgba(22, 22, 22, 0.815) 0.1rem 0.2rem;
   width: 200px;
   width: 50%;
@@ -35,11 +105,14 @@ li {
   width: 88%;
 }
 
+/*** Form ***/
+
 form {
   display: flex;
   width: 40%;
   flex-direction: column;
-  margin: 3rem auto;
+  padding-top: 200px;
+  margin: 0 auto;
 }
 
 input {
@@ -71,4 +144,30 @@ button {
 #add-book-button {
   margin: 0.5rem auto;
   width: 15%;
+}
+
+/*** Contact info ***/
+#contact-info {
+  display: flex;
+  padding-top: 100px;
+  margin: 0 auto;
+  width: 50%;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+#contact-info > h2 {
+  text-align: center;
+}
+
+/*** Footer ***/
+footer {
+  border: 1px solid #333;
+  background-color: #fff;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 10px;
+  text-align: left;
+  width: 49%;
+  left: 25%;
 }

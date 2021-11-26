@@ -47,14 +47,22 @@ class Book {
 
     const removeBook = document.querySelectorAll('.remove-btn');
 
-    removeBook.forEach((button) => {
-      button.addEventListener('click', (e) => {
-        Book.books.splice(e.target.id, 1);
+    removeBook.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        Book.books.splice(index, 1);
         Book.store(Book.books);
         Book.displayBooks();
       });
     });
   };
+}
+
+function setDate() {
+  const date = document.getElementById('set-date');
+  // eslint-disable-next-line no-undef
+  const { DateTime } = luxon;
+
+  date.innerHTML = DateTime.now().toFormat('LLL dd yyyy, t');
 }
 
 addBookButton.addEventListener('click', (e) => {
@@ -65,9 +73,4 @@ addBookButton.addEventListener('click', (e) => {
   bookAuthor.value = '';
 });
 
-window.onload = () => {
-  if (localStorage.length === 0) {
-    localStorage.setItem('books', JSON.stringify(Book.books));
-  }
-  Book.displayBooks();
-};
+export { Book, setDate, addBookButton };
