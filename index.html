@@ -9,14 +9,16 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <nav>
-      <a class="active" href="#home">Awesome Books</a>
-      <div id="nav-list">
-        <a class="nav-list-item" id="list" href="#list">List</a>
-        <a class="nav-list-item" id="add-new" href="#add-new">Add New</a>
-        <a class="nav-list-item" id="contact" href="#contact">Contact</a>
-      </div>
-    </nav>
+    <header id="nav-wrapper">
+      <nav>
+        <a class="active" href="#home">Awesome Books</a>
+        <div id="nav-list">
+          <a class="nav-list-item" id="list" href="#list">List</a>
+          <a class="nav-list-item" id="add-new" href="#add-new">Add New</a>
+          <a class="nav-list-item" id="contact" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
     <section id="set-date"></section>
     <section id="books">
       <h2 id="awesome-books-title">All Awesome Books</h2>
@@ -25,7 +27,10 @@
         <h2 class="form-title">Add a new book</h2>
         <input type="text" id="book-title" placeholder="Title" />
         <input type="text" id="book-author" placeholder="Author" />
-        <button id="add-book-button" type="button">Add Book</button>
+        <button id="add-book-button" type="button">
+          <span id="text-button">Add Book</span>
+          <span id="symbol-button">+</span>
+        </button>
       </form>
       <section id="contact-info">
         <h2>Contact us</h2>

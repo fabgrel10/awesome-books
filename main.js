@@ -21,8 +21,8 @@ const contactTab = document.getElementById('contact-info');
 (() => {
   if (bookStorage.children.length === 0) {
     awesomeBooksTitle.style.display = 'none';
-    bookStorage.style.display = 'none';
-    addForm.style.display = 'flex';
+    bookStorage.style.display = 'flex';
+    addForm.style.display = 'none';
     contactTab.style.display = 'none';
   }
 })();
