@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/extensions
 import * as index from './index.js';
 
 const list = document.getElementById('list');
