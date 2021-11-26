@@ -47,9 +47,9 @@ class Book {
 
     const removeBook = document.querySelectorAll('.remove-btn');
 
-    removeBook.forEach((button) => {
-      button.addEventListener('click', (e) => {
-        Book.books.splice(e.target.id, 1);
+    removeBook.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        Book.books.splice(index, 1);
         Book.store(Book.books);
         Book.displayBooks();
       });
