@@ -4,7 +4,7 @@
 
 > "Awesome books" is basic website that allows users to add/remove books from a list using JavaScript objects and arrays.
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot.gif)
 
 ## Built With
 
@@ -48,7 +48,6 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
-
 
 ## 📝 License
 
