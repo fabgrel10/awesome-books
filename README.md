@@ -1,6 +1,8 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Awesome Books
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
+![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
 
 > "Awesome books" is basic website that allows users to add/remove books from a list using JavaScript objects and arrays.
 
